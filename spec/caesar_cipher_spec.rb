@@ -19,5 +19,8 @@ describe 'CaesarCipher' do
     it 'returns a message shifted by more than 26' do
       expect(caesar_cipher('this is a message', 42)).to eql('jxyi yi q cuiiqwu')
     end
+    it 'returns a message shifted by 26' do
+      expect(caesar_cipher('this is a message', 26)).to eql('this is a message')
+    end
   end
 end
