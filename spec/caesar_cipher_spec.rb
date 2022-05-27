@@ -16,5 +16,8 @@ describe 'CaesarCipher' do
     it 'returns an uppercase message' do
       expect(caesar_cipher('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)).to eql('WXYZABCDEFGHIJKLMNOPQRSTUV')
     end
+    it 'returns a message shifted by more than 26' do
+      expect(caesar_cipher('this is a message', 42)).to eql('jxyi yi q cuiiqwu')
+    end
   end
 end
