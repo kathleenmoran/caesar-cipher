@@ -13,5 +13,8 @@ describe 'CaesarCipher' do
     it 'returns a lowercase message' do
       expect(caesar_cipher('abcdefghijklmnopqrstuvwxyz', 13)).to eql('nopqrstuvwxyzabcdefghijklm')
     end
+    it 'returns an uppercase message' do
+      expect(caesar_cipher('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 22)).to eql('WXYZABCDEFGHIJKLMNOPQRSTUV')
+    end
   end
 end
