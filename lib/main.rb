@@ -6,11 +6,9 @@ end
 
 def shift(start_ord, end_ord, char_ord, shift)
   new_ord = char_ord + shift
-  if new_ord > end_ord
-    (start_ord + (new_ord % end_ord) - 1).chr
-  else
-    new_ord.chr
-  end
+  return (start_ord + (new_ord % end_ord) - 1).chr if new_ord > end_ord
+
+  new_ord.chr
 end
 
 def get_new_char(char, shift)
