@@ -22,5 +22,8 @@ describe 'CaesarCipher' do
     it 'returns a message shifted by 26' do
       expect(caesar_cipher('this is a message', 26)).to eql('this is a message')
     end
+    it 'returns a message with characters not in the alphabet' do
+      expect(caesar_cipher('14332edf bhehr23111...]]][[', 10)).to eql('14332onp lrorb23111...]]][[')
+    end
   end
 end
