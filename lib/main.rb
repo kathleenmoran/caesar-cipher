@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 def caesar_cipher(message, shift)
-  message.chars.reduce('') { |new_message, char| new_message + get_new_char(char, shift) }
+  message.chars.reduce('') { |new_message, char| new_message + get_new_char(char, shift % 26) }
 end
 
 def shift(start_ord, end_ord, char_ord, shift)
